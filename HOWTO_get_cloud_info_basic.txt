@@ -1,0 +1,12 @@
+Have the "clouds.yaml" file in the current dir.
+call this:
+python3 -m os_client_config.config
+
+enjoy the result!!
+
+FROM:
+http://docs.openstack.org/developer/os-client-config/#usage
+
+And apparently the above is the least useful thing that you can do with it  :)  :/
+I thought it was cool to get this far anyway.
+

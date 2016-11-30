@@ -1,0 +1,10 @@
+export OS_USERNAME=bobthetester
+export OS_PASSWORD=<password>
+export OS_AUTH_URL=https://identity1.citycloud.com:5000/v3/
+export OS_USER_DOMAIN_ID=7fa1740b70344cc6b17c8e2301e2f216
+export OS_REGION_NAME=Kna1
+export OS_PROJECT_ID=4173e662998c45df9b3f79659f82aa21
+export OS_TENANT_ID=4173e662998c45df9b3f79659f82aa21
+export OS_AUTH_VERSION=3
+export OS_IDENTITY_API_VERSION=3
+

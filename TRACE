@@ -1,0 +1,61 @@
+                                                     
+shade.exc.OpenStackCloudException: ('Server reached ACTIVE state without being allocated an IP address.', 
+{'server': 
+Munch({'created': '2016-11-29T03:46:05Z', 'OS-EXT-STS:vm_state': 'active', 
+'security_groups': None, 'OS-SRV-USG:launched_at': '2016-11-29T03:46:09.000000', 
+'adminPass': None, 
+'properties': {'OS-EXT-STS:vm_state': 'active', 
+'OS-SRV-USG:launched_at': '2016-11-29T03:46:09.000000', 'OS-EXT-STS:power_state': 1, 
+'request_ids': [], 'os-extended-volumes:volumes_attached': [], 'OS-EXT-STS:task_state': None, 
+'OS-SRV-USG:terminated_at': None, 
+'OS-EXT-AZ:availability_zone': 'nova', 
+'OS-DCF:diskConfig': 'MANUAL'},
+'os-extended-volumes:volumes_attached': [], 'cloud': 'citycloud', 
+'name': 'bobs_test_instance', 
+'public_v4': '', 'terminated_at': None, 'private_v4': '', 
+'image': {'id': 'cd498f49-6766-4bba-82bd-5433d3656b84'}, 
+'tenant_id': '4173e662998c45df9b3f79659f82aa21', 
+'addresses': {}, 'networks': {}, 'config_drive': '', 
+'location': Munch({'region_name': 'Kna1', 'zone': 'nova', 
+'project': Munch({'domain_id': None, 'id': '4173e662998c45df9b3f79659f82aa21', 
+'domain_name': None, 'name': None}), 
+'cloud': 'citycloud'}), 
+'public_v6': '', 'metadata': {}, 'accessIPv4': '', 'updated': '2016-11-29T03:46:09Z', 
+'az': 'nova', 'volumes': [], 'OS-DCF:diskConfig': 'MANUAL', 
+'hostId': '51d286fd6841e0aa1e5f046bb05e1a7ccbd76645ccfb02ac15702566', 'status': 'ACTIVE', 
+'key_name': None, 'vm_state': 'active', 'OS-EXT-STS:power_state': 1, 'request_ids': [], 
+'progress': 0, 'id': '9abecd7f-985c-455e-9c33-ce6820231286', 
+'OS-SRV-USG:terminated_at': None, 'region': 'Kna1', 
+'user_id': '66d65a37dc124eb193f654a1dd771d4f', 'OS-EXT-AZ:availability_zone': 'nova', 
+'host_id': '51d286fd6841e0aa1e5f046bb05e1a7ccbd76645ccfb02ac15702566', 'task_state': None, 
+'launched_at': '2016-11-29T03:46:09.000000', 
+'project_id': '4173e662998c45df9b3f79659f82aa21', 'disk_config': 'MANUAL', 'OS-EXT-STS:task_state': None, 
+'interface_ip': '', 'flavor': {'id': '5a10e223-aada-4d5a-8633-84525e05b28f'}, 
+'power_state': 1, 'has_config_drive': False, 'accessIPv6': ''
+})
+}
+) 
+
+(Ex
+tra: {'server': Munch({'created': '2016-11-29T03:46:05Z', 'OS-EXT-STS:vm_state': 'active'
+, 'security_groups': None, 'OS-SRV-USG:launched_at': '2016-11-29T03:46:09.000000', 'admin
+Pass': None, 'properties': {'OS-EXT-STS:vm_state': 'active', 'OS-SRV-USG:launched_at': '2
+016-11-29T03:46:09.000000', 'OS-EXT-STS:power_state': 1, 'request_ids': [], 'os-extended-
+volumes:volumes_attached': [], 'OS-EXT-STS:task_state': None, 'OS-SRV-USG:terminated_at':
+ None, 'OS-EXT-AZ:availability_zone': 'nova', 'OS-DCF:diskConfig': 'MANUAL'}, 'os-extende
+d-volumes:volumes_attached': [], 'cloud': 'citycloud', 'name': 'bobs_test_instance', 'pub
+lic_v4': '', 'terminated_at': None, 'private_v4': '', 'image': {'id': 'cd498f49-6766-4bba
+-82bd-5433d3656b84'}, 'tenant_id': '4173e662998c45df9b3f79659f82aa21', 'addresses': {}, '
+networks': {}, 'config_drive': '', 'location': Munch({'region_name': 'Kna1', 'zone': 'nov
+a', 'project': Munch({'domain_id': None, 'id': '4173e662998c45df9b3f79659f82aa21', 'domai
+n_name': None, 'name': None}), 'cloud': 'citycloud'}), 'public_v6': '', 'metadata': {}, '
+accessIPv4': '', 'updated': '2016-11-29T03:46:09Z', 'az': 'nova', 'volumes': [], 'OS-DCF:
+diskConfig': 'MANUAL', 'hostId': '51d286fd6841e0aa1e5f046bb05e1a7ccbd76645ccfb02ac1570256
+6', 'status': 'ACTIVE', 'key_name': None, 'vm_state': 'active', 'OS-EXT-STS:power_state':
+ 1, 'request_ids': [], 'progress': 0, 'id': '9abecd7f-985c-455e-9c33-ce6820231286', 'OS-S
+RV-USG:terminated_at': None, 'region': 'Kna1', 'user_id': '66d65a37dc124eb193f654a1dd771d
+4f', 'OS-EXT-AZ:availability_zone': 'nova', 'host_id': '51d286fd6841e0aa1e5f046bb05e1a7cc
+bd76645ccfb02ac15702566', 'task_state': None, 'launched_at': '2016-11-29T03:46:09.000000'
+, 'project_id': '4173e662998c45df9b3f79659f82aa21', 'disk_config': 'MANUAL', 'OS-EXT-STS:
+task_state': None, 'interface_ip': '', 'flavor': {'id': '5a10e223-aada-4d5a-8633-84525e05
+b28f'}, 'power_state': 1, 'has_config_drive': False, 'accessIPv6': ''})}) 

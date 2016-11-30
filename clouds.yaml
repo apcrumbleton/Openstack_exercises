@@ -1,0 +1,22 @@
+## NEW PROJECT:
+# ADDED via Settings->Manage Projects "Create Project" button
+# PROJECT:	bobtest 	8da56fc66dc449bb9ea3563097ea3e25
+#
+## NEW USER:
+# ADDED via API->Native Openstack API "Create user"
+# USER:	bobthetester	<OLD FAITHFUL>
+## NOTE: "API user created successfully" message was received when the user was added and given access to the default project
+# The RC-File was downloaded, and the values from that file were used to populate these values:
+#
+clouds:
+  citycloud:
+    auth:
+      username: bobthetester
+      password: d2559167
+      project_id: 4173e662998c45df9b3f79659f82aa21
+      tenant_id: 4173e662998c45df9b3f79659f82aa21
+      auth_url: https://identity01.citycloud.com:5000/v3/
+      user_domain_id: 7fa1740b70344cc6b17c8e2301e2f216
+    region_name: Kna1
+##nova 	Kna1 	https://kna1.citycloud.com:8774/v2/4173e662998c45df9b3f79659f82aa21
+##nova 	La1 	https://la1.citycloud.com:8774/v2/4173e662998c45df9b3f79659f82aa21

@@ -1,0 +1,165 @@
+Name: FreeBSD 11.0 RELEASE
+ID: 2c657129-64fe-4eba-99a0-32123fcde9d3
+Size (bytes??): 1854210048
+Min RAM: 0
+
+Name: CoreOS 1068.9.0
+ID: 623f29ef-bf67-4bb2-ac5f-454d9a411200
+Size (bytes??): 791674880
+Min RAM: 0
+
+Name: Debian 8.5
+ID: 3c7a552d-aec6-454d-8620-f3e9cbc0cdda
+Size (bytes??): 485465600
+Min RAM: 0
+
+Name: Fedora 24
+ID: 849f5491-3826-4f3e-9427-a4723c5ceebf
+Size (bytes??): 204590080
+Min RAM: 0
+
+Name: FreeBSD 10.3 RELEASE
+ID: 0a2cdad8-6048-42bb-955b-819928a9b4ed
+Size (bytes??): 2069102592
+Min RAM: 0
+
+Name: Ubuntu 16.04 Xenial Xerus
+ID: cd498f49-6766-4bba-82bd-5433d3656b84
+Size (bytes??): 303235072
+Min RAM: 0
+
+Name: CoreOS 835.13.0
+ID: ade5ff96-3e88-4051-9491-c3f1e8b29d23
+Size (bytes??): 614137856
+Min RAM: 0
+
+Name: Ubuntu 14.04 Trusty Tahr 20160304
+ID: 73fb3e07-4f2f-4eba-b285-307f439b6b2a
+Size (bytes??): 259260928
+Min RAM: 0
+
+Name: CentOS 7 1602
+ID: 0b44d240-3822-4d46-b6aa-33073d574522
+Size (bytes??): 914685952
+Min RAM: 0
+
+Name: Debian 8.2
+ID: f6f9d77e-1d22-4031-a662-28be79976cdc
+Size (bytes??): 490775040
+Min RAM: 0
+
+Name: Fedora 23
+ID: ace8f7a8-008a-46ae-974f-98dd5c1b3bb5
+Size (bytes??): 234363392
+Min RAM: 0
+
+Name: CoreOS 835.9.0
+ID: 9863d75a-8f01-475a-bd07-4d7063f9e8a9
+Size (bytes??): 635699200
+Min RAM: 0
+
+Name: Windows 2012 R2 Datacenter with MSSQL Enterprise 2014
+ID: 1075605a-90af-4824-be88-62e5e7b05159
+Size (bytes??): 11275403264
+Min RAM: 4096
+
+Name: Ubuntu 14.10 - Utopic Unicorn
+ID: 41d37545-47c4-47a2-8600-fad90cfc08b4
+Size (bytes??): 268173824
+Min RAM: 0
+
+Name: Fedora 22
+ID: 542c20ab-dd45-41c9-8ec1-2b4d7067a683
+Size (bytes??): 228599296
+Min RAM: 0
+
+Name: Debian 8.1
+ID: a1aae38a-231e-4217-b763-d676a9c89647
+Size (bytes??): 480938496
+Min RAM: 0
+
+Name: Windows 2012 R2 Datacenter with MSSQL 2014
+ID: 023dfa74-25b0-4bca-8cdf-d171770cd97e
+Size (bytes??): 9951576064
+Min RAM: 4096
+
+Name: Debian 8
+ID: e1e0cf52-4b35-4a5e-bee7-ee8238d0ffb9
+Size (bytes??): 468853760
+Min RAM: 0
+
+Name: Fedora 21
+ID: ad09a9da-1bf9-4044-b6ff-2f9337a31a65
+Size (bytes??): 158443520
+Min RAM: 0
+
+Name: Suse Linux Enterprise 12 with phone support
+ID: 1df35096-99f9-4e24-b915-0d1a9c96c28b
+Size (bytes??): 373358592
+Min RAM: 0
+
+Name: Suse Linux Enterprise 12 without phone support
+ID: 9c37d72f-9fdb-4538-bc54-4e819313f626
+Size (bytes??): 373358592
+Min RAM: 0
+
+Name: Suse Linux Enterprise 11 SP3 without phone support
+ID: 807457b2-d7e8-4016-91e0-4888dc15125b
+Size (bytes??): 284491776
+Min RAM: 0
+
+Name: Suse Linux Enterprise 11 SP3 with phone support
+ID: 898fdcd6-f1f2-479d-a6b5-a556deb97624
+Size (bytes??): 284491776
+Min RAM: 0
+
+Name: openSUSE 13.2
+ID: 7e93e4e0-31be-4b59-a750-fddb35797039
+Size (bytes??): 290455552
+Min RAM: 0
+
+Name: CoreOS 522.4.0
+ID: 521d914b-a551-4bda-926d-4800ee8c6907
+Size (bytes??): 421789696
+Min RAM: 0
+
+Name: Ubuntu 14.04 - LTS - Trusty Tahr
+ID: 517335db-ebff-4d33-befc-8200cd7c7093
+Size (bytes??): 255918592
+Min RAM: 0
+
+Name: Ubuntu 12.04.5 - LTS - Precise Pangolin
+ID: dd3ae186-d4e7-4d39-9296-e52de4b28622
+Size (bytes??): 262406656
+Min RAM: 0
+
+Name: Windows 2012 R2 Datacenter
+ID: 9b6a1ecd-0653-4a33-9754-1d5e9e36475b
+Size (bytes??): 17182752768
+Min RAM: 2048
+
+Name: Fedora 20
+ID: d25bcc24-20de-4095-abe0-bd5cf318947b
+Size (bytes??): 210829312
+Min RAM: 0
+
+Name: Debian 7
+ID: 4d320786-19fc-4c2a-b987-8eeb14becc70
+Size (bytes??): 551324160
+Min RAM: 0
+
+Name: CentOS 7
+ID: f0f394b1-5546-4b68-b2bc-8abe8a7e6b8b
+Size (bytes??): 339471872
+Min RAM: 0
+
+Name: CentOS 6.5
+ID: 259468c6-457e-46e8-95e3-f15d3f67846e
+Size (bytes??): 344457216
+Min RAM: 0
+
+Name: cirros
+ID: 7957e95d-add9-46cd-866e-884579f40552
+Size (bytes??): 13167616
+Min RAM: 0
+

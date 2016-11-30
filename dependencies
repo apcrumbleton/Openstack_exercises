@@ -1,0 +1,7 @@
+things needed to be installed:
+python3-devel
+libopenssl-devel
+
+pip install --upgrade pip
+pip install os_client_config
+pip install shade

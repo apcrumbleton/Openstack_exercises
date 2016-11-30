@@ -1,0 +1,20 @@
+After you get registered to login to citycloud and can see the parts of the interface....
+
+You should CREATE A USER
+Even though you have a user (an admin) that can login to the site, this is NOT the user that OS will use for operations on the API!!
+
+via API->Native Openstack API "Create user" button:
+make a new user with a password, and drag accross the default project so that they can use it.
+NOTE: "API user created successfully" message should be received when the user is added and given access to the project
+
+NOW, with the user created, they appear in the "Native Openstack API" page under "Users"
+AND, there is a "cog" wheel button to the right of the user, this button has the option to "Download RC-File", which is what is mentioned in the OpenStack and Shade documents
+
+With that file downloaded, you can now populate the "clouds.yaml" file with appropriate values
+
+Then, the python code to use SHADE to connect to the cloud and interrogate the capabilities will work!
+NOTABLY the list of images will work and you can manipulate the resulting DICT objects to make a list of images in a file to refer to later.
+
+NOTE: the listing of FLAVORS takes a LONG time, with lots of connection messages comning through.
+So, to get the list, be patient!! and let it run.
+
