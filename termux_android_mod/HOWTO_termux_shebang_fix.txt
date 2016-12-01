@@ -1,0 +1,1 @@
+The termux android application has a tool called termux-fix-shebang which is used to alter the shebang line directly in the script file so that it runs correctly within the termux android environment.
