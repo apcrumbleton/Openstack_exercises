@@ -18,3 +18,39 @@ NOTABLY the list of images will work and you can manipulate the resulting DICT o
 NOTE: the listing of FLAVORS takes a LONG time, with lots of connection messages comning through.
 So, to get the list, be patient!! and let it run.
 
+CREATING AN INSTANCE - i.e. starting an actual server.
+using the given example at the http://developer.openstack.org/firstapp-shade/ site, the instance creation reports a problem:
+"Server reached ACTIVE state without being allocated an IP address"
+There were several indicators in the output that the status of the system was "ACTIVE", however, there is no record of the server being instantiated on the citycloud servers.
+A check on the running servers via the SHADE API, showed no instances or servers running.
+
+THEREFORE, it is concluded that FIRST, a network must be configured in the region in which one is working so that when the instance is created via shade, there is a network infrastructure present to provide IP addresses and general connectivity.
+Presently, this will be done via the citycloud web control pannel.
+
+NETWORK:
+A network called "bobnet" has been created via the citycloud web interface in the region KNA1 (Karlskrona):
+bobnet	IPv4 10.1.0.0/24	External IP: 188.212.108.142
+
+The server/instance creation is then retried:
+SUCCESS!!!
+See file "Instance_creation_output"
+The instance is pingable too!!!
+ping -c4 188.212.109.247
+PING 188.212.109.247 (188.212.109.247) 56(84) bytes of data.
+64 bytes from 188.212.109.247: icmp_seq=1 ttl=45 time=456 ms
+64 bytes from 188.212.109.247: icmp_seq=2 ttl=45 time=379 ms
+64 bytes from 188.212.109.247: icmp_seq=3 ttl=45 time=402 ms
+64 bytes from 188.212.109.247: icmp_seq=4 ttl=45 time=426 ms
+
+--- 188.212.109.247 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3000ms
+rtt min/avg/max/mdev = 379.989/416.318/456.425/28.340 ms
+
+The citycloud server dashboard shows the new server as online and available!
+
+The instantiating of the test instance was successful!
+
+A quick script was used to delete the running instance, as such things COST REAL MONEY!!
+The delete process is reasonably quick and the script returns no output upon success.
+
+

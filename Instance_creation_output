@@ -1,0 +1,79 @@
+~/Openstack_exercises/termux_android_mod $ ./os_create_instance_TEST.py    
+Munch({'properties': {'OS-DCF:diskConfig': 'MANUAL', 'OS-SRV-USG:launched_a
+t': '2016-12-01T10:24:27.000000', 'OS-SRV-USG:terminated_at': None, 'reques
+t_ids': [], 'os-extended-volumes:volumes_attached': [], 'OS-EXT-STS:vm_stat
+e': 'active', 'OS-EXT-STS:power_state': 1, 'OS-EXT-STS:task_state': None, '
+OS-EXT-AZ:availability_zone': 'nova'}, 'disk_config': 'MANUAL', 'launched_a
+t': '2016-12-01T10:24:27.000000', 'addresses': {'bobnet': [{'addr': '10.1.0
+.4', 'version': 4, 'OS-EXT-IPS-MAC:mac_addr': 'fa:16:3e:84:d6:38', 'OS-EXT-
+IPS:type': 'fixed'}, {'addr': '188.212.109.247', 'version': 4, 'OS-EXT-IPS:
+type': 'floating', 'OS-EXT-IPS-MAC:mac_addr': 'de:ad:be:ef:be:ef'}]}, 'requ
+est_ids': [], 'tenant_id': '4173e662998c45df9b3f79659f82aa21', 'image': {'i
+d': 'cd498f49-6766-4bba-82bd-5433d3656b84'}, 'user_id': '66d65a37dc124eb193
+f654a1dd771d4f', 'accessIPv6': '', 'accessIPv4': '188.212.109.247', 'power_
+state': 1, 'progress': 0, 'OS-DCF:diskConfig': 'MANUAL', 'location': Munch(
+{'region_name': 'Kna1', 'cloud': 'citycloud', 'project': Munch({'domain_nam
+e': None, 'domain_id': None, 'id': '4173e662998c45df9b3f79659f82aa21', 'nam
+e': None}), 'zone': 'nova'}), 'adminPass': 'ervw5r239WKB', 'OS-SRV-USG:term
+inated_at': None, 'config_drive': '', 'interface_ip': '188.212.109.247', 'v
+olumes': [], 'security_groups': [{'name': 'default'}], 'hostId': '9b4ee28a6
+ace2f13861ecbc1326099138250335d7d2ddf0c2b6a18b4', 'project_id': '4173e66299
+8c45df9b3f79659f82aa21', 'metadata': {}, 'OS-EXT-STS:vm_state': 'active', '
+OS-SRV-USG:launched_at': '2016-12-01T10:24:27.000000', 'region': 'Kna1', 't
+erminated_at': None, 'OS-EXT-AZ:availability_zone': 'nova', 'private_v4': '
+10.1.0.4', 'status': 'ACTIVE', 'OS-EXT-STS:task_state': None, 'task_state':
+ None, 'flavor': {'id': '5a10e223-aada-4d5a-8633-84525e05b28f'}, 'OS-EXT-ST
+ S:power_state': 1, 'host_id': '9b4ee28a6ace2f13861ecbc1326099138250335d7d2d
+ df0c2b6a18b4', 'has_config_drive': False, 'key_name': None, 'created': '201
+ 6-12-01T10:24:22Z', 'os-extended-volumes:volumes_attached': [], 'id': '22d1
+ 3408-a355-4dfe-8a67-e7942f4b8308', 'az': 'nova', 'vm_state': 'active', 'net
+ works': {'bobnet': ['10.1.0.4']}, 'cloud': 'citycloud', 'updated': '2016-12
+ -01T10:24:27Z', 'public_v6': '', 'name': 'bobs_test_instance', 'public_v4':
+  '188.212.109.247'})
+
+Munch({'properties': {'OS-DCF:diskConfig': 'MANUAL', 'OS-SRV-USG:launched_a
+t': '2016-12-01T10:24:27.000000', 'OS-SRV-USG:terminated_at': None, 'reques
+t_ids': [], 'os-extended-volumes:volumes_attached': [], 'OS-EXT-STS:vm_stat
+e': 'active', 'OS-EXT-STS:power_state': 1, 'OS-EXT-STS:task_state': None, '
+OS-EXT-AZ:availability_zone': 'nova'}, 'disk_config': 'MANUAL', 'launched_a
+t': '2016-12-01T10:24:27.000000', 'addresses': {'bobnet': [{'addr': '10.1.0
+.4', 'version': 4, 'OS-EXT-IPS-MAC:mac_addr': 'fa:16:3e:84:d6:38', 'OS-EXT-
+IPS:type': 'fixed'}, {'addr': '188.212.109.247', 'version': 4, 'OS-EXT-IPS:
+type': 'floating', 'OS-EXT-IPS-MAC:mac_addr': 'de:ad:be:ef:be:ef'}]}, 'requ
+est_ids': [], 'tenant_id': '4173e662998c45df9b3f79659f82aa21', 'image': {'i
+d': 'cd498f49-6766-4bba-82bd-5433d3656b84'}, 'user_id': '66d65a37dc124eb193
+f654a1dd771d4f', 'accessIPv6': '', 'accessIPv4': '188.212.109.247', 'power_
+state': 1, 'progress': 0, 'OS-DCF:diskConfig': 'MANUAL', 'location': Munch(
+{'region_name': 'Kna1', 'cloud': 'citycloud', 'project': Munch({'domain_nam
+e': None, 'domain_id': None, 'id': '4173e662998c45df9b3f79659f82aa21', 'nam
+e': None}), 'zone': 'nova'}), 'adminPass': None, 'OS-SRV-USG:terminated_at'
+: None, 'config_drive': '', 'interface_ip': '188.212.109.247', 'volumes': [
+], 'security_groups': [{'name': 'default'}], 'hostId': '9b4ee28a6ace2f13861
+ecbc1326099138250335d7d2ddf0c2b6a18b4', 'project_id': '4173e662998c45df9b3f
+79659f82aa21', 'metadata': {}, 'OS-EXT-STS:vm_state': 'active', 'OS-SRV-USG
+:launched_at': '2016-12-01T10:24:27.000000', 'region': 'Kna1', 'terminated_
+at': None, 'OS-EXT-AZ:availability_zone': 'nova', 'private_v4': '10.1.0.4',
+ 'status': 'ACTIVE', 'OS-EXT-STS:task_state': None, 'task_state': None, 'fl
+ avor': {'id': '5a10e223-aada-4d5a-8633-84525e05b28f'}, 'OS-EXT-STS:power_st
+ ate': 1, 'host_id': '9b4ee28a6ace2f13861ecbc1326099138250335d7d2ddf0c2b6a18
+ b4', 'has_config_drive': False, 'key_name': None, 'created': '2016-12-01T10
+ :24:22Z', 'os-extended-volumes:volumes_attached': [], 'id': '22d13408-a355-
+ 4dfe-8a67-e7942f4b8308', 'az': 'nova', 'vm_state': 'active', 'networks': {'
+ bobnet': ['10.1.0.4']}, 'cloud': 'citycloud', 'updated': '2016-12-01T10:24:
+ 27Z', 'public_v6': '', 'name': 'bobs_test_instance', 'public_v4': '188.212.
+ 109.247'})                                                                 
+ ~/Openstack_exercises/termux_android_mod $
+
+AND IT IS PINGABLE:
+ping -c4 188.212.109.247
+PING 188.212.109.247 (188.212.109.247) 56(84) bytes of data.
+64 bytes from 188.212.109.247: icmp_seq=1 ttl=45 time=456 ms
+64 bytes from 188.212.109.247: icmp_seq=2 ttl=45 time=379 ms
+64 bytes from 188.212.109.247: icmp_seq=3 ttl=45 time=402 ms
+64 bytes from 188.212.109.247: icmp_seq=4 ttl=45 time=426 ms
+
+--- 188.212.109.247 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3000ms
+rtt min/avg/max/mdev = 379.989/416.318/456.425/28.340 ms
+
+
