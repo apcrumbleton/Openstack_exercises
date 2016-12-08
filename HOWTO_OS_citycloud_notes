@@ -54,3 +54,64 @@ A quick script was used to delete the running instance, as such things COST REAL
 The delete process is reasonably quick and the script returns no output upon success.
 
 
+KEYPAIR:
+A separate ssh key pair was made for use in these exercises:
+ssh-keygen -C "Openstack exercise key for bobtest" -f keys/bobtest
+
+This will be passed into the openstack instance.
+
+New script created:
+./os_keypairs.py
+
+the keypair was inserted successfully:
+Munch({'NAME_ATTR': 'name', 'name': 'bobdemokey', 'public_key': 'ssh-rsa AAAAB3NzaC1
+yc2EAAAADAQABAAABAQC8rdG8ISsvnocxLL25tgpqc3CgucuelYykfw6tGOKJ8VWfK/vEJgZ92c/vDlqp+sA
+lmz9CJcSho4dAjuP80y1ZLyXbKVGiwaaS2gzrPVBKdfOFe9Yg/qtqRmmowD0qP628T1p1XJlPQsEftUFeZr4
+KObXTHfdPhDR69TX+bzE2N/LtnUk5TxD48IgS+wN84A0H4iqg8UbSz5DL20llTAQZKGOqpQkVgvUBkhaUHoX
+PR6S39PaVUWeU2qGYvrUNOPFAc+QgBKn0y6nBLUSbylTwpoEUgUbzj80XP+pO9Rrn834XT4vhmpMTCT7NgZB
+L57q/QmIHqhTQ9FfnR9Lm/FPl Openstack exercise key for bobtest', 'human_id': None, 're
+quest_ids': [], 'id': 'bobdemokey', 'HUMAN_ID': False, 'fingerprint': 'ef:1d:03:19:d
+7:d0:5d:33:18:7c:6c:0b:c5:65:d9:ae'})
+
+
+Create a SECURITY GROUP to allow network access to the eventual instance via ssh and http:
+the script:
+os_security_group.py
+generates a security group 'ssh_web' to allow such access.
+
+The web interface was checked to see that the group was indeed created on the Karlskrona / Sweden area:
+ssh_web 	network access for all-in-one application. 	4
+
+
+In order to use the fractals application that is mentioned in the shade web exercises, there is a pre-built shell script that is obtained from the application developers to ensure that a running instance will contain the necessary software and services. This script will be dynamically run from the Python script using the following construct:
+
+ex_userdata = '''#!/usr/bin/env bash
+
+curl -L -s https://git.openstack.org/cgit/openstack/faafo/plain/contrib/install.sh | bash -s -- \
+-i faafo -i messaging -r api -r worker -r demo
+'''
+
+Having the above defined in the script will permit the shell script to be obtained and executed within the running instance.
+
+FINALLY, we can instantiate the full server and run the various elements that will make it available to us.
+
+
+The server HAS started successfully AND has produced configuraiton information:
+
+Munch({'created': '2016-12-08T06:57:57Z', 'OS-EXT-STS:task_state': None, 'volumes': [], 'OS-SRV-USG:launched_at': '2016-12-08T06:58:03.000000', 'tenant_id': '4173e662998c45df9b3f79659f82aa21', 'status': 'ACTIVE', 'public_v6': '', 'az': 'nova', 'metadata': {}, 'cloud': 'citycloud', 'updated': '2016-12-08T06:58:03Z', 'has_config_drive': False, 'location': Munch({'project': Munch({'domain_id': None, 'domain_name': None, 'id': '4173e662998c45df9b3f79659f82aa21', 'name': None}), 'region_name': 'Kna1', 'zone': 'nova', 'cloud': 'citycloud'}), 'OS-EXT-STS:vm_state': 'active', 'properties': {'os-extended-volumes:volumes_attached': [], 'OS-EXT-STS:task_state': None, 'OS-EXT-AZ:availability_zone': 'nova', 'OS-DCF:diskConfig': 'MANUAL', 'OS-SRV-USG:launched_at': '2016-12-08T06:58:03.000000', 'OS-EXT-STS:power_state': 1, 'request_ids': [], 'OS-EXT-STS:vm_state': 'active', 'OS-SRV-USG:terminated_at': None}, 'OS-DCF:diskConfig': 'MANUAL', 'OS-EXT-AZ:availability_zone': 'nova', 'config_drive': '', 'launched_at': '2016-12-08T06:58:03.000000', 'OS-SRV-USG:terminated_at': None, 'terminated_at': None, 'disk_config': 'MANUAL', 'private_v4': '10.1.0.5', 'region': 'Kna1', 'power_state': 1, 'accessIPv4': '', 'request_ids': [], 'security_groups': [{'name': 'ssh_web'}], 'hostId': '2d27df5a41d8fea8c155141af648756d91a669843e639440931fa9e0', 'accessIPv6': '', 'host_id': '2d27df5a41d8fea8c155141af648756d91a669843e639440931fa9e0', 'progress': 0, 'vm_state': 'active', 'image': {'id': 'cd498f49-6766-4bba-82bd-5433d3656b84'}, 'interface_ip': '', 'id': 'f628707f-7f3f-4d77-845f-6c35148e5c17', 'OS-EXT-STS:power_state': 1, 'networks': {'bobnet': ['10.1.0.5']}, 'public_v4': '', 'key_name': 'bobdemokey', 'adminPass': None, 'task_state': None, 'addresses': {'bobnet': [{'addr': '10.1.0.5', 'OS-EXT-IPS:type': 'fixed', 'version': 4, 'OS-EXT-IPS-MAC:mac_addr': 'fa:16:3e:0b:f8:8a'}]}, 'name': 'bobs_test_instance', 'project_id': '4173e662998c45df9b3f79659f82aa21', 'flavor': {'id': '5a10e223-aada-4d5a-8633-84525e05b28f'}, 'os-extended-volumes:volumes_attached': [], 'user_id': '66d65a37dc124eb193f654a1dd771d4f'})
+
+NOTE: The above DID NOT generate an automatic IP becuase of a setting in the instantiation process.
+So, the lines to manually obtain and assign such an IP were added.
+
+REDO of the above and it seems to work!!!!
+./os_FINAL_server_instantiate.py 
+The Fractals app will be deployed to http://91.106.193.188
+
+
+To connect to the server, use SSH and the special keys we setup
+NOTE: ensure RESTRICTIVE permission on the private key:
+ chmod 600 keys/bobtest
+
+then connect with 
+ssh -i keys/bobtest ubuntu@91.106.193.188
+
