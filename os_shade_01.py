@@ -2,6 +2,7 @@
 """Test program to get and list available images within a cloud"""
 
 #import pprint
+import sys
 from shade import *
 from os_connector import *
 
@@ -13,11 +14,12 @@ conn = os_cc_conn()
 #pp.pprint(conn)
 #pprint.pprint(decode((conn))
 
-#images = conn.list_images()
-#for image in images:
+images = conn.list_images()
+for image in images:
 #    #print(image)
-#    print("Name: "+image['name']+"\n"+"ID: "+image['id']+"\n"+"Size (bytes??): "
-#            +repr(image['size'])+"\n"+"Min RAM: "+repr(image['minRam'])+"\n")
+    print("Name: "+image['name']+"\n"+"ID: "+image['id']+"\n"+"Size (bytes??): "
+            +repr(image['size'])+"\n"+"Min RAM: "+repr(image['minRam'])+"\n")
+sys.exit(0)
 
 ## An Ubuntu image:
 #Name: Ubuntu 16.04 Xenial Xerus

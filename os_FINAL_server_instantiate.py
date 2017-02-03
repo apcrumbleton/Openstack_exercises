@@ -12,7 +12,7 @@ conn = os_cc_conn()
 # Get the image ID and flavor ID from the previous scripts:
 # os_create_instance_TEST.py, os_shade_01.py
 flavor_id = '5a10e223-aada-4d5a-8633-84525e05b28f'
-image_id = 'cd498f49-6766-4bba-82bd-5433d3656b84'
+image_id = '517335db-ebff-4d33-befc-8200cd7c7093'
 instance_name = 'bobs_test_instance'
 
 # Get the key pair name and security group name from previous scripts:

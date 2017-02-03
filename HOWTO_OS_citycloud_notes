@@ -115,3 +115,12 @@ NOTE: ensure RESTRICTIVE permission on the private key:
 then connect with 
 ssh -i keys/bobtest ubuntu@91.106.193.188
 
+
+Basic conneciton WORKS.
+BUT the fractal application FAAFO was NOT working, the error log from Python indicated that it was failing to make a connection.
+SO, the script from the developers was downloaded to the "plop" file and the installation process for MYSQL was MANUALLY executed. This showed that the MYSQL install required ROOT interactions Notably regarding the PASSWORD settings. So after this was done, the rest of the script install and configuraiton processes were followed manually.
+
+Once this was complete, the control program for the fractals was restarted with " supervisorctl reload", and then the web-page was refreshed at:
+http://91.106.193.188
+This resulted in the default fractal being calculated and displayed as expected on the web interface.
+

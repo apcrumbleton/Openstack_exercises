@@ -1,0 +1,40 @@
+ ./os_split_control-worker.py
+The Fractals app controller will be deployed to http:// 91.106.195.64
+The Fractals app worker will be available via SSH at 91.106.195.71 
+
+ssh -i ../keys/bobtest ubuntu@91.106.195.71
+SUCCESS:
+ubuntu@app-worker-1:~$ ps ax | grep faafo
+ 8591 ?        S      0:00 /usr/bin/python /usr/local/bin/faafo-worker
+
+ssh -i ../keys/bobtest ubuntu@91.106.195.64
+SUCCESS:
+ubuntu@app-controller:~$ ps ax | grep faafo
+ 9415 ?        S      0:00 /usr/bin/python /usr/local/bin/faafo-api
+
+
+Call for new fractals on the controller:
+faafo --endpoint-url http://localhost --verbose create
+
+SUCCESS:
+Option "verbose" from group "DEFAULT" is deprecated for removal.  Its value may be silently ignored in the future.
+2017-01-31 06:32:17.147 9676 INFO faafo.client [-] generating 7 task(s) 
+
+NOTE: a small spike in the CPU use in "top" on the worker was noted.
+
+ubuntu@app-controller:~$ faafo --endpoint-url http://localhost --debug create
+2017-01-31 07:17:28.857 10787 INFO faafo.client [-] generating 3 task(s)
+2017-01-31 07:17:28.858 10787 DEBUG faafo.client [-] created task {'width': 381, 'yb'
+: 0.9933875608384062, 'uuid': '1952cd41-2fa5-4c7b-b13c-2944fa2e5aa6', 'iterations': 4
+59, 'xb': 2.6684832098353684, 'xa': -3.062087117411438, 'ya': -1.7449753710900344, 'h
+eight': 758} do_create_fractal /usr/local/bin/faafo:166                              
+2017-01-31 07:17:28.923 10787 DEBUG faafo.client [-] created task {'width': 757, 'yb'
+: 2.229148954728017, 'uuid': 'e76cb4d2-c6d9-49e7-9651-fb1ea02a7082', 'iterations': 15
+7, 'xb': 3.9784435495362116, 'xa': -2.76646723417067, 'ya': -1.0264282581542847, 'hei
+ght': 746} do_create_fractal /usr/local/bin/faafo:166                                
+2017-01-31 07:17:28.949 10787 DEBUG faafo.client [-] created task {'width': 663, 'yb'
+: 1.3401934383770087, 'uuid': '41020eab-df14-4ceb-af19-0db0d768f5e3', 'iterations': 2
+21, 'xb': 1.7378702460122237, 'xa': -3.0926522798799065, 'ya': -2.60964695901462, 'he
+ight': 723} do_create_fractal /usr/local/bin/faafo:166
+
+

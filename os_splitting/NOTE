@@ -1,0 +1,22 @@
+IMPORTANT NOTE
+It has been found that in order for the worker node to talk to the controller node, the INTERNAL IP of the controller had to be placed into the configuration file on the worker node here:
+ /etc/faafo/faafo.conf
+
+These lines had to be changed:
+transport_url = amqp://guest:guest@10.1.0.9:5672/
+endpoint_url = http://10.1.0.9
+
+Then the faafo-worker process was killed and it restarted itself.
+after that, from the control node, the fractal creation was initiated and the fractals were correctly created with proper file size AND were viewable from the web interface at the PUBLIC IP of the control node.
+
+
+TEST commands:
+to test the running faafo application, from the CONTROL node, use these commands:
+faafo --endpoint-url http://localhost --verbose create
+# That will instruct it to make fractals and the worker node should make them
+faafo list
+# That will show all the fractals generated so far, and there should be real file sizes listed.
+faafo show <UUID>
+# Given a UUID from the previous list operation, it will show info about the fractal.
+You an now also goto the web-page of the control node and refresh it to see the actual new fractals.
+
