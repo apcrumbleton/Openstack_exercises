@@ -15,7 +15,7 @@ clouds:
       password: d2559167
       project_id: 4173e662998c45df9b3f79659f82aa21
       tenant_id: 4173e662998c45df9b3f79659f82aa21
-      auth_url: https://identity01.citycloud.com:5000/v3/
+      auth_url: https://identity1.citycloud.com:5000/v3/
       user_domain_id: 7fa1740b70344cc6b17c8e2301e2f216
     region_name: Kna1
 ##nova 	Kna1 	https://kna1.citycloud.com:8774/v2/4173e662998c45df9b3f79659f82aa21

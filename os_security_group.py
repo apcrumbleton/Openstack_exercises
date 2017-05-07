@@ -9,13 +9,16 @@ from os_connector import *
 conn = os_cc_conn()
 
 print('\nChecking for existing security groups ...\n')
-sec_group_name = 'ssh_web'
+#sec_group_name = 'ssh_web'
+sec_group_name = 'ssh_mandel'
 if conn.search_security_groups(sec_group_name):
     print('Security group already exists. Skipping creation.')
 else:
     print('Creating Security group ... ')
     conn.create_security_group(sec_group_name, 'network access for all-in-one application.')
-    conn.create_security_group_rule(sec_group_name, 80, 80, 'TCP')
+#    conn.create_security_group_rule(sec_group_name, 80, 80, 'TCP')
+    ## mandelbulber fractal connection port
+    conn.create_security_group_rule(sec_group_name, 5555, 5555, 'TCP')
     conn.create_security_group_rule(sec_group_name, 22, 22, 'TCP')
 
 conn.search_security_groups(sec_group_name)
